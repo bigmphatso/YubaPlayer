@@ -1,0 +1,21 @@
+{
+  "name": "yubaplayer",
+  "version": "1.0.0",
+  "description": "A sleek HTML5, CSS, and JavaScript desktop media player.",
+  "main": "main.js",
+  "author": "Hunter",
+  "license": "ISC",
+  "scripts": {
+    "start": "electron .",
+    "package-linux": "electron-packager . yubaplayer --platform=linux --arch=x64 --out=dist/ --overwrite",
+    "package-mac": "electron-packager . yubaplayer --platform=darwin --arch=x64 --out=dist/ --overwrite",
+    "package-win": "electron-packager . yubaplayer --platform=win32 --arch=x64 --out=dist/ --overwrite"
+  },
+  "devDependencies": {
+    "electron": "^42.4.1",
+    "electron-packager": "^17.1.2"
+  },
+  "overrides": {
+    "yauzl": "^3.1.3"
+  }
+}

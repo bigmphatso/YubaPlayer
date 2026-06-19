@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YubaPlayer Pro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-shell">
+        <nav class="top-nav">
+            <div class="logo">YUBA<span>PLAYER</span></div>
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search collection...">
+            </div>
+            <div class="nav-actions">
+                <button id="themeToggle" class="icon-btn"><i class="fas fa-sun"></i></button>
+                <button id="folderBtn" class="btn-primary">Load Folder</button>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <section class="focus-zone">
+                <div class="art-wrapper">
+                    <img id="albumArt" src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=1000" alt="Art">
+                </div>
+                <div class="meta">
+                    <h1 id="activeTitle">YubaPlayer</h1>
+                    <p id="activeArtist">Select Music Folder</p>
+                </div>
+            </section>
+
+            <section class="library-zone">
+                <div class="lib-header">
+                    <h2>Your Tracks</h2>
+                    <span id="trackCount">0 Songs</span>
+                </div>
+                <div id="playlist" class="scrollable-list"></div>
+            </section>
+        </main>
+
+        <footer class="player-bar">
+            <div class="timeline">
+                <span id="currentTime">0:00</span>
+                <div class="progress-bg" id="progressRail">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <span id="duration">0:00</span>
+            </div>
+            <div class="controls">
+                <button id="shuffleBtn" class="tool-btn"><i class="fas fa-random"></i></button>
+                <button id="prevBtn" class="nav-btn"><i class="fas fa-step-backward"></i></button>
+                <button id="playBtn" class="play-trigger"><i class="fas fa-play"></i></button>
+                <button id="nextBtn" class="nav-btn"><i class="fas fa-step-forward"></i></button>
+                <button id="repeatBtn" class="tool-btn"><i class="fas fa-redo"></i></button>
+            </div>
+        </footer>
+    </div>
+    <audio id="audioEngine"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
