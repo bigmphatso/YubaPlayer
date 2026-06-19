@@ -100,7 +100,7 @@ The `.exe` name is determined by Electron Packager from the app name in `package
 - Album art is fetched automatically when available.
 - If artwork lookup fails, playback still works normally.
 - The app accesses files through the folder picker, so your music stays on your machine.
-- Build artifacts live in `dist/` and should not be committed to git.
+- Build artifacts live in `dist/` and are not be committed to git.
 
 ## Project Structure
 
